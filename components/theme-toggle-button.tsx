@@ -1,12 +1,6 @@
 "use client"
 
-import {
-  Monitor,
-  Moon,
-  MoonIcon,
-  Sun,
-  SunIcon
-} from "lucide-react"
+import { Monitor, Moon, MoonIcon, Sun, SunIcon } from "lucide-react"
 import { useTheme } from "next-themes"
 
 import { Button } from "@/components/ui/button"
@@ -62,6 +56,7 @@ export function ModeToggle() {
   )
 }
 
+/**  Accessible theme toggler for dropdown menu */
 export function ThemeSwitch() {
   const { setTheme, theme } = useTheme()
 
@@ -92,7 +87,7 @@ export function ThemeSwitch() {
         />
       </DropdownMenuItem>
       <DropdownMenuItem
-      title="System theme"
+        title="System theme"
         className={cn(
           theme === "system"
             ? "bg-primary hover:bg-primary focus:bg-primary"
@@ -116,7 +111,7 @@ export function ThemeSwitch() {
         />
       </DropdownMenuItem>
       <DropdownMenuItem
-      title="Dark theme"
+        title="Dark theme"
         className={cn(
           theme === "dark"
             ? "bg-primary hover:bg-primary focus:bg-primary"
